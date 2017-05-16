@@ -1,11 +1,13 @@
-{{#each areas}}
+{{#each this}}
 
- <section id="card--{{@index}}" class="card-wrapper" style="border: 2px solid">
-     <h3>#{{increment @index}} Cake </h3>
-     <h4>{{name}} {{description}}</h4>
+<section id="card{{@index}}" class="card-wrapper" style="border: 2px solid">
 
-     <p class="card-copy"> {{description}}</p>
+    <h3>#{{increment @index}} Theme Park </h3>
+    <h4>{{name}}</h4>
+    <br><p>{{description}}</p>
 
- </section>
+
+
+</section>
 
 {{/each}}
