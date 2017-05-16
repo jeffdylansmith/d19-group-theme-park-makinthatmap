@@ -1,8 +1,16 @@
 module.exports = function(grunt) {
   grunt.initConfig({
       browserify: {
-          '../dist/app.js': ['../javascripts/*.js']
-      },
+          '../dist/app.js': ['../javascripts/*.js'],
+      options: {
+        transform: ["hbsfy"],
+        browserifyOptions: {
+          paths: [
+          "./node_modules"
+          ]
+        }
+      }
+    },
     jshint: {
       files: ['../javascripts/**/*.js'], //location of javascript files
       options: {
@@ -32,6 +40,10 @@ module.exports = function(grunt) {
       browserify: {
         files: ['../javascripts/*.js'],
         tasks: ["browserify"]
+      },
+      hbs: {
+        files: ['../templates/**/*.hbs'],
+        tasks: ['browserify']
       }
     }
   });
