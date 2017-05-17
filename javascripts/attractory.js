@@ -1,9 +1,9 @@
 'use strict';
 
 let parkArea = [],
-	parkAttraction = [],
-	parkAttractionTypes =[],
-	park = {};
+    parkAttraction = [],
+    parkAttractionTypes = [],
+    park = {};
 
 park.loadParkArea = () => {
     return new Promise((resolve, reject) => {
@@ -28,17 +28,15 @@ park.loadParkAttraction = (area) => {
         loader.addEventListener('load', function() {
             var data = JSON.parse(this.responseText);
             parkAttraction = data;
-
-            for(let i = 0; i < parkAttraction.length; i++) {
-        		if(parkAttraction[i].area_id == area) {
-        			// console.log(parkAttraction[i]);
-        		}
-        	}
-            resolve(data);
+            let array = [];
+            for (let i = 0; i < parkAttraction.length; i++) {
+                if (parkAttraction[i].area_id === area) {
+                    array.push(parkAttraction[i]);
+                }
+            }
+            resolve(array);
         });
     });
-
-
 };
 
 park.loadParkAttractionTypes = () => {
@@ -63,7 +61,7 @@ park.loadParkInfo = () => {
 
         loader.addEventListener('load', function() {
             var data = JSON.parse(this.responseText);
-            parkAttractionTypes = data;
+            park = data;
             resolve(data);
         });
     });

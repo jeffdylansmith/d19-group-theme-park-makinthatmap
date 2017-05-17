@@ -1,16 +1,19 @@
 'use strict';
 let Handlebars = require('hbsfy/runtime'),
-	parkInventory = require('./attractory.js'),
+	attractory = require('./attractory.js'),
 	cardTemplate = require('../templates/card-template.hbs'),
 	heading = require('../templates/heading_template.hbs'),
 	footerTemplate = require('../templates/footer_template.hbs'),
 	events = require('./events.js'),
+	card_modul = require('../templates/card_modul.hbs'),
 	_ = require('lodash');
 
 Handlebars.registerHelper('increment', (value) => parseInt(value) + 1);
 
-function populatePage(stuff) {
-	$('#container').html(cardTemplate(stuff));
+function populatePage(e) {
+
+	$('#container').html(cardTemplate(e));
+
 	events();
 }
 
@@ -26,42 +29,36 @@ function populateFooter() {
 	$('#footer').append(footer);
 }
 
-parkInventory.loadParkArea()
+attractory.loadParkArea()
     .then(
         (loadThemePark) => {
-            // console.log('Park Area', loadThemePark);
             populatePage(loadThemePark);
         },
         (reject) => {
             console.log('ERROR');
         });
 
-parkInventory.loadParkAttraction()
+attractory.loadParkAttraction()
     .then(
         (loadThemePark) => {
-            // console.log('Park Attraction', loadThemePark);
-            // var times = _.groupBy(loadThemePark, 'times');
-            // console.log(times);
+        	events();
+        },
+        (reject) => {
+            console.log('ERROR');
+        });
+
+attractory.loadParkAttractionTypes()
+    .then(
+        (loadThemePark) => {
 
         },
         (reject) => {
             console.log('ERROR');
         });
 
-parkInventory.loadParkAttractionTypes()
+attractory.loadParkInfo()
     .then(
         (loadThemePark) => {
-            // console.log('Park Attraction Types', loadThemePark);
-
-        },
-        (reject) => {
-            console.log('ERROR');
-        });
-
-parkInventory.loadParkInfo()
-    .then(
-        (loadThemePark) => {
-            // console.log('Park Info', loadThemePark);
             populateHeading(loadThemePark);
             populateFooter(loadThemePark);
         },
