@@ -55,31 +55,6 @@ cardStyle.highlightCard = function(event) {
 		console.log('card not found');
 	}
 
-	// let name = event.target.closest('.name');
-	// $('.hidden').hide();
-
-	// let hidden = $('.hidden');
-
-
-
-
-
-
-	// for (let x in name) {
-	// 	name[x].addEventListener('click', function() {
-	// 		hidden[x].show();
-	// 	});
-	// }
-
-
-	// $('.hidden').hide();
-
-	// $('.name').click(() => {
-	// 	if (name.id == 'name0') {
-	// 		$('#hidden0').show();
-	// 	}
-
-	// });
 
 
 

@@ -14,7 +14,7 @@ attractory.loadParkAttraction(1)
 				if (loadThemePark[i].type_id === 2) {
 					mainStreettArray.push(loadThemePark[i]);
 				}
-				// if (loadThemePark)
+
 			}
 			// card_modul(mainStreetArray);
 			let newDiv = $('<div id="modal1" class="modal">').html(card_modul(mainStreettArray));

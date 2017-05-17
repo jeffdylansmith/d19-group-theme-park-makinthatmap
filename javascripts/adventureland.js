@@ -11,10 +11,11 @@ attractory.loadParkAttraction(2)
             let adventureArray = [];
 
             for (let i = 0; i < loadThemePark.length; i++) {
-                if (loadThemePark[i].type_id === 2) {
+                if (loadThemePark[i].type_id === 5) {
                     adventureArray.push(loadThemePark[i]);
                     // console.log(adventureArray);
                 }
+
             }
 
             let newDiv = $('<div id="modal2" class="modal">').html(card_modul(adventureArray));
