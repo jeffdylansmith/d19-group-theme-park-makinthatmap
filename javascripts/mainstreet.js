@@ -13,7 +13,7 @@ attractory.loadParkAttraction(1)
 			for (let i = 0; i < loadThemePark.length; i++) {
 				if (loadThemePark[i].type_id === 2) {
 					mainStreetArray.push(loadThemePark[i]);
-					console.log(mainStreetArray);
+					// console.log(mainStreetArray);
 				}
 			}
 			// card_modul(mainStreetArray);

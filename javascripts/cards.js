@@ -17,7 +17,28 @@ cardStyle.highlightCard = function(event) {
 	var card = event.target.closest(".card-wrapper");
 
 	card.classList.add("is-clicked");
-	$('#modal1').modal('open');
+
+	if (card.id == 'card0') {
+		$('#modal1').modal('open');
+	} else if (card.id == 'card1') {
+		$('#modal2').modal('open');
+	} else if (card.id == 'card2') {
+		$('#modal3').modal('open');
+	} else if (card.id == 'card3') {
+		$('#modal4').modal('open');
+	} else if (card.id == 'card4') {
+		$('#modal5').modal('open');
+	} else if (card.id == 'card5') {
+		$('#modal6').modal('open');
+	} else if (card.id == 'card6') {
+		$('#modal7').modal('open');
+	} else {
+		console.log('card not found');
+	}
+
+
+
+
 
 };
 
