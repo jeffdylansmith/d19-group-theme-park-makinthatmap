@@ -14,9 +14,28 @@ cardStyle.highlightCard = function(event) {
 		}
 	}
 
+	let hidden = $('.hidden'),
+		name = $('.name');
+
+	if (hidden.length > 0) {
+		for (let j = 0; j < hidden.length; j++) {
+			$(hidden[j]).hide();
+			$(name[j]).click(() => {
+				$(hidden[j]).show();
+				$(hidden[j]).click(() => {
+					$(hidden[j]).hide();
+				});
+			});
+
+		}
+	}
+
 	var card = event.target.closest(".card-wrapper");
 
 	card.classList.add("is-clicked");
+
+
+
 
 	if (card.id == 'card0') {
 		$('#modal1').modal('open');
@@ -36,7 +55,31 @@ cardStyle.highlightCard = function(event) {
 		console.log('card not found');
 	}
 
+	// let name = event.target.closest('.name');
+	// $('.hidden').hide();
 
+	// let hidden = $('.hidden');
+
+
+
+
+
+
+	// for (let x in name) {
+	// 	name[x].addEventListener('click', function() {
+	// 		hidden[x].show();
+	// 	});
+	// }
+
+
+	// $('.hidden').hide();
+
+	// $('.name').click(() => {
+	// 	if (name.id == 'name0') {
+	// 		$('#hidden0').show();
+	// 	}
+
+	// });
 
 
 
