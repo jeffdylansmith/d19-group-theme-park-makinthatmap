@@ -3,18 +3,18 @@
 let attractory = require('./attractory'),
 	card_modul = require('../templates/card_modul.hbs');
 
-attractory.loadParkAttraction(4)
-    .then(
+attractory.loadParkAttraction(7)
+	.then(
         (loadThemePark) => {
-        	let libertySquare = [];
+        	let cinderella = [];
         	for (let i = 0; i < loadThemePark.length; i++) {
                 if (loadThemePark[i].type_id === 2) {
-                    libertySquare.push(loadThemePark[i]);
+                    cinderella.push(loadThemePark[i]);
                     // console.log(adventureArray);
                 }
             }
 
-            let newDiv = $('<div id="modal4" class="modal">').html(card_modul(libertySquare));
+            let newDiv = $('<div id="modal7" class="modal">').html(card_modul(cinderella));
             $('#container').append(newDiv);
             $('.modal').modal();
         },
@@ -22,5 +22,7 @@ attractory.loadParkAttraction(4)
         (reject) => {
             console.log('ERROR');
         });
+
+
 
 module.exports = attractory;

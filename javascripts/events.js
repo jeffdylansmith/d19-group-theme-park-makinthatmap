@@ -4,7 +4,8 @@ var cardStyle = require('./cards');
 
 
 function activateEvents() {
-  $(".card-wrapper").click(cardStyle.highlightCard);
-}
+
+    	$(".card-wrapper").click(cardStyle.highlightCard);
+    }
 
 module.exports = activateEvents;
