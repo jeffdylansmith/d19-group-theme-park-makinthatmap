@@ -12,12 +12,22 @@ attractory.loadParkAttraction(1)
 
 			for (let i = 0; i < loadThemePark.length; i++) {
 				if (loadThemePark[i].type_id === 2) {
+					// loadThemePark[i].fansy = 'Restaurants';
+					mainStreettArray.push(loadThemePark[i]);
+				}
+				if (loadThemePark[i].type_id === 1) {
+					mainStreettArray.push(loadThemePark[i]);
+				}
+				if (loadThemePark[i].type_id === 6) {
+					mainStreettArray.push(loadThemePark[i]);
+				}
+				if (loadThemePark[i].type_id === 8) {
 					mainStreettArray.push(loadThemePark[i]);
 				}
 
 			}
-			// card_modul(mainStreetArray);
-			let newDiv = $('<div id="modal1" class="modal">').html(card_modul(mainStreettArray));
+			let newDiv = $('<div id="modal1" class="modal modal-fixed-footer">').html(card_modul(mainStreettArray));
+
 			$('#container').append(newDiv);
 			$('.modal').modal();
 		},

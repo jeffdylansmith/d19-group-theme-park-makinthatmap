@@ -16,6 +16,11 @@ park.loadParkArea = () => {
         loader.addEventListener('load', function() {
             var data = JSON.parse(this.responseText);
             parkArea = data;
+            // filter ares
+            // let array = [];
+            // for (let i = 0; i < 7; i++) {
+            // 	array.push(parkArea[i]);
+            // }
             resolve(data);
         });
     });
@@ -34,10 +39,6 @@ park.loadParkAttraction = (area) => {
 
 
 			for (let i = 0; i < parkAttraction.length; i++) {
-				// let times = [];
-				// times = parkAttraction[i].times;
-				// timesNumber = parseInt(times);
-
 
                 if (parkAttraction[i].area_id === area) {
                     array.push(parkAttraction[i]);

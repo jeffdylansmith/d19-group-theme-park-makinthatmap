@@ -10,7 +10,15 @@ attractory.loadParkAttraction(5)
         	for (let i = 0; i < loadThemePark.length; i++) {
                 if (loadThemePark[i].type_id === 2) {
                     fantasy.push(loadThemePark[i]);
-                    // console.log(adventureArray);
+                }
+                if (loadThemePark[i].type_id === 7) {
+                    fantasy.push(loadThemePark[i]);
+                }
+                if (loadThemePark[i].type_id === 3) {
+                    fantasy.push(loadThemePark[i]);
+                }
+                if (loadThemePark[i].type_id === 8) {
+                    fantasy.push(loadThemePark[i]);
                 }
             }
 

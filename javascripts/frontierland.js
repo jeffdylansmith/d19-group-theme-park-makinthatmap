@@ -8,9 +8,17 @@ attractory.loadParkAttraction(3)
         (loadThemePark) => {
         	let frontierLand = [];
         	for (let i = 0; i < loadThemePark.length; i++) {
-                if (loadThemePark[i].type_id === 2) {
+                if (loadThemePark[i].type_id === 1) {
                     frontierLand.push(loadThemePark[i]);
-                    // console.log(adventureArray);
+                }
+                if (loadThemePark[i].type_id === 3) {
+                    frontierLand.push(loadThemePark[i]);
+                }
+                if (loadThemePark[i].type_id === 5) {
+                    frontierLand.push(loadThemePark[i]);
+                }
+                if (loadThemePark[i].type_id === 7) {
+                    frontierLand.push(loadThemePark[i]);
                 }
             }
 

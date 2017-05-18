@@ -1,10 +1,17 @@
 		<div class="modal-content">
+		{{!-- <p>{{fansy}}</p> --}}
 {{#each this}}
-      		<h4 class="name">{{name}}</h4>
-      		<p class="hidden">{{description}}{{times}}</p>
+
+			<h4>{{type_value type_id}}</h4>
+      		<h5 class="name">{{name}}</h5>
+      		<p class="hidden">{{description}}</p>
+      		<p>{{times}}</p>
+
+
 {{/each}}
     	</div>
     	<div class="modal-footer">
       		<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
     	</div>
 
+{{!--  --}}

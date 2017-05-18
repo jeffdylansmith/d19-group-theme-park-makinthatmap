@@ -10,7 +10,15 @@ attractory.loadParkAttraction(7)
         	for (let i = 0; i < loadThemePark.length; i++) {
                 if (loadThemePark[i].type_id === 2) {
                     cinderella.push(loadThemePark[i]);
-                    // console.log(adventureArray);
+                }
+                if (loadThemePark[i].type_id === 8) {
+                    cinderella.push(loadThemePark[i]);
+                }
+                if (loadThemePark[i].type_id === 3) {
+                    cinderella.push(loadThemePark[i]);
+                }
+                if (loadThemePark[i].type_id === 5) {
+                    cinderella.push(loadThemePark[i]);
                 }
             }
 

@@ -8,7 +8,35 @@ let Handlebars = require('hbsfy/runtime'),
 	card_modul = require('../templates/card_modul.hbs'),
 	_ = require('lodash');
 
-Handlebars.registerHelper('increment', (value) => parseInt(value) + 1);
+Handlebars.registerHelper('type_value', (value) => {
+	if (value == 1) {
+		return 'Ride';
+	} else if (value == 2) {
+		return 'Restaurant';
+	} else if (value == 3) {
+		return 'Show';
+	} else if (value == 4) {
+		return 'Vendor';
+	} else if (value == 5) {
+		return 'Character Meet';
+	} else if (value == 6) {
+		return 'Animals';
+	} else if (value == 7) {
+		return 'Game';
+	} else if (value == 8){
+		return 'Special Event';
+	}
+});
+
+
+Handlebars.registerHelper('if_eq', (a, b) => {
+	if (a == b) {
+		return true;
+	} else {
+		return false;
+	}
+});
+
 
 function populatePage(e) {
 
