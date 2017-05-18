@@ -8,9 +8,17 @@ attractory.loadParkAttraction(4)
         (loadThemePark) => {
         	let libertySquare = [];
         	for (let i = 0; i < loadThemePark.length; i++) {
-                if (loadThemePark[i].type_id === 2) {
+                if (loadThemePark[i].type_id === 8) {
                     libertySquare.push(loadThemePark[i]);
-                    // console.log(adventureArray);
+                }
+                if (loadThemePark[i].type_id === 1) {
+                    libertySquare.push(loadThemePark[i]);
+                }
+                if (loadThemePark[i].type_id === 4) {
+                    libertySquare.push(loadThemePark[i]);
+                }
+                if (loadThemePark[i].type_id === 6) {
+                    libertySquare.push(loadThemePark[i]);
                 }
             }
 

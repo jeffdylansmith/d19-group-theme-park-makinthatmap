@@ -15,6 +15,15 @@ attractory.loadParkAttraction(2)
                     adventureArray.push(loadThemePark[i]);
                     // console.log(adventureArray);
                 }
+                if (loadThemePark[i].type_id === 1) {
+                    adventureArray.push(loadThemePark[i]);
+                }
+                if (loadThemePark[i].type_id === 7) {
+                    adventureArray.push(loadThemePark[i]);
+                }
+                if (loadThemePark[i].type_id === 4) {
+                    adventureArray.push(loadThemePark[i]);
+                }
 
             }
 

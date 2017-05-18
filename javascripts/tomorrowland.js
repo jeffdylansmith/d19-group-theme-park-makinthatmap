@@ -8,9 +8,17 @@ attractory.loadParkAttraction(6)
         (loadThemePark) => {
         	let tomorrow = [];
         	for (let i = 0; i < loadThemePark.length; i++) {
-                if (loadThemePark[i].type_id === 2) {
+                if (loadThemePark[i].type_id === 1) {
                     tomorrow.push(loadThemePark[i]);
-                    // console.log(adventureArray);
+                }
+                if (loadThemePark[i].type_id === 3) {
+                    tomorrow.push(loadThemePark[i]);
+                }
+                if (loadThemePark[i].type_id === 4) {
+                    tomorrow.push(loadThemePark[i]);
+                }
+                if (loadThemePark[i].type_id === 8) {
+                    tomorrow.push(loadThemePark[i]);
                 }
             }
 
