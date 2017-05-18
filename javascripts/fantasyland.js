@@ -21,7 +21,7 @@ attractory.loadParkAttraction(5)
                     fantasy.push(loadThemePark[i]);
                 }
             }
-
+            console.log(fantasy);
             let newDiv = $('<div id="modal5" class="modal">').html(card_modul(fantasy));
             $('#container').append(newDiv);
             $('.modal').modal();

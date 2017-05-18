@@ -2,13 +2,14 @@
 
 let attractory = require('./attractory'),
 	_ = require('lodash'),
-	card_modul = require('../templates/card_modul.hbs');
-
+	card_modul = require('../templates/card_modul.hbs'),
+	utilities = require('./utilities');
 
 attractory.loadParkAttraction(1)
 	.then(
 		(loadThemePark) => {
 			let mainStreettArray = [];
+
 
 			for (let i = 0; i < loadThemePark.length; i++) {
 				if (loadThemePark[i].type_id === 2) {
@@ -26,8 +27,10 @@ attractory.loadParkAttraction(1)
 				}
 
 			}
-			let newDiv = $('<div id="modal1" class="modal modal-fixed-footer">').html(card_modul(mainStreettArray));
+			let modalData = utilities(mainStreettArray);
 
+			let newDiv = $('<div id="modal1" class="modal modal-fixed-footer">').html(card_modul(modalData));
+			console.log(utilities(mainStreettArray));
 			$('#container').append(newDiv);
 			$('.modal').modal();
 		},

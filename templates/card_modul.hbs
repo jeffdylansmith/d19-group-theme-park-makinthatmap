@@ -1,17 +1,223 @@
 		<div class="modal-content">
-		{{!-- <p>{{fansy}}</p> --}}
-{{#each this}}
 
-			<h4>{{type_value type_id}}</h4>
+
+			{{!-- <h4>{{type_value type_id}}</h4>
       		<h5 class="name">{{name}}</h5>
       		<p class="hidden">{{description}}</p>
-      		<p>{{times}}</p>
+      		<p>{{times}}</p> --}}
 
+          <h4>Rides</h4>
+          {{#each this.rides}}
+          <h5 class="name">{{name}}</h5>
+          <p class="hidden">{{description}}</p>
+          <p>{{times}}</p>
+          {{/each}}
 
-{{/each}}
+          <h4>Restaurants</h4>
+          {{#each this.restaurants}}
+          <h5 class="name">{{name}}</h5>
+          <p class="hidden">{{description}}</p>
+          <p>{{times}}</p>
+          {{/each}}
+
+         {{!--  <h4>Rides</h4>
+          {{#each this.rides}}
+          <h5 class="name">{{name}}</h5>
+          <p class="hidden">{{description}}</p>
+          <p>{{times}}</p>
+          {{/each}}
+
+          <h4>Rides</h4>
+          {{#each this.rides}}
+          <h5 class="name">{{name}}</h5>
+          <p class="hidden">{{description}}</p>
+          <p>{{times}}</p>
+          {{/each}}
+
+          <h4>Rides</h4>
+          {{#each this.rides}}
+          <h5 class="name">{{name}}</h5>
+          <p class="hidden">{{description}}</p>
+          <p>{{times}}</p>
+          {{/each}}
+
+          <h4>Rides</h4>
+          {{#each this.rides}}
+          <h5 class="name">{{name}}</h5>
+          <p class="hidden">{{description}}</p>
+          <p>{{times}}</p>
+          {{/each}}
+
+          <h4>Rides</h4>
+          {{#each this.rides}}
+          <h5 class="name">{{name}}</h5>
+          <p class="hidden">{{description}}</p>
+          <p>{{times}}</p>
+          {{/each}}
+
+          <h4>Rides</h4>
+          {{#each this.rides}}
+          <h5 class="name">{{name}}</h5>
+          <p class="hidden">{{description}}</p>
+          <p>{{times}}</p>
+          {{/each}}
+ --}}
     	</div>
     	<div class="modal-footer">
       		<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
     	</div>
 
-{{!--  --}}
+
+      {{!-- {
+  "rides": [
+    {
+      "area_id": 1,
+      "description": "Listen to the clamor of the engine, the chug of the wheels and the call of the whistle as you travel aboard the Walt Disney World Railroad. Offering convenient stops at Frontierland, Fantasyland and Main Street, U.S.A., it's the perfect way to preview the magic at Magic Kingdom park and take in the picturesque scenery.",
+      "id": 1,
+      "name": "Walt Disney World Railroad",
+      "type_id": 1
+    },
+    {
+      "area_id": 1,
+      "description": "Catch a nostalgic ride to Cinderella Castle or Town Square aboard a vintage vehicle. Board a classic horse-drawn car, omnibus, jitney or fire engine and sit back as you are ushered from one end of Main Street, U.S.A. to the other. Along the way, behold a bevy of 2- and 3-story-high, Victorian-themed shops and restaurants from a time and place long since passed.",
+      "id": 2,
+      "name": "Main Street Vehicles",
+      "type_id": 1
+    }
+  ],
+  "restaurants": [
+    {
+      "area_id": 1,
+      "description": "Step inside this charming turn-of-the-century trattoria on Main Street, U.S.A., with its whitewashed balustrades, French doors and expansive front porch, which offers a fantastic view of evening parades. Take in the classic 1955 film Lady and the Tramp playing in the lobby and pictures of the 2 pooches gracing the wall.",
+      "id": 10,
+      "name": "Tony's Town Square Restaurant",
+      "type_id": 2
+    },
+    {
+      "area_id": 1,
+      "description": "Make a stop on the way down Main Street and top off your day with a tasty cup or even a mouthwatering treat—including a selection of STARBUCKS® Coffee and specialty beverages, along with Disney baked goods and La Boulange™ pastry items. ",
+      "id": 11,
+      "name": "Main Street Bakery",
+      "type_id": 2
+    },
+    {
+      "area_id": 1,
+      "description": "Step inside this charming dining parlor awash in turn-of-the-century Art Nouveau touches, including beautifully embellished light fixtures and mirrors and an inviting solarium. The mayor has even been known to drop by—after all, he does live just down the street!",
+      "id": 12,
+      "name": "The Plaza Restaurant",
+      "type_id": 2
+    },
+    {
+      "area_id": 1,
+      "description": "Indulge in hand-scooped ice cream at this sweetly nostalgic parlor on Main Street, U.S.A. Savor floats, fresh waffle-bowl sundaes smothered in hot fudge and Mickey cones with chocolate ears! Fat- and sugar-free options are also available. ",
+      "id": 13,
+      "name": "Plaza Ice Cream Parlor",
+      "type_id": 2
+    },
+    {
+      "area_id": 1,
+      "description": "Hit it out of the park with American baseball favorites: hot dogs, corn dog nuggets, French fries, cotton candy and Cracker Jack. You may even catch Jim tickling the ivories to ragtime tunes outside. Soft drinks are also available. ",
+      "id": 14,
+      "name": "Casey's Corner",
+      "type_id": 2
+    },
+    {
+      "area_id": 1,
+      "description": "Inspired by Victorian greenhouses of the late 1800s, The Crystal Palace brims with light, topiaries and tropical palms—and is an enchanting spot to meet some favorite Disney Friends!",
+      "id": 15,
+      "name": "The Crystal Palace",
+      "type_id": 2
+    }
+  ],
+  "shows": [],
+  "vendor": [],
+  "characters": [],
+  "animals": [
+    {
+      "area_id": 1,
+      "description": "Look for draft horses, including Clydesdales, Percherons and Belgians, pulling the Main Street Trolley. Draft horses are the largest breed of horses and are bred to pull heavy loads. However, our Main Street Trolley is actually designed to be lightweight which helps us provide the best care and safety to our horses.",
+      "id": 19,
+      "name": "Horses - Disney Animals",
+      "type_id": 6
+    }
+  ],
+  "games": [],
+  "events": [
+    {
+      "area_id": 1,
+      "description": "Join our nighttime baroque hoedown on Main Street U.S.A as half a million lights pulsate and move to the music. ",
+      "id": 20,
+      "name": "Main Street Electrical Light Parade",
+      "type_id": 8
+    },
+    {
+      "area_id": 1,
+      "description": "Drum roll, trumpet call! Marching on Main Street, U.S.A. clad in bright red and white uniforms—the band is a site to behold! Performing old-school marches, big band hits and Disney classics, they rock out a mix.",
+      "id": 120,
+      "name": "Main Street Philharmonic at Main Street, U.S.A.",
+      "times": [
+        "1340",
+        "1540"
+      ],
+      "type_id": 8
+    },
+    {
+      "area_id": 1,
+      "description": "Featuring catchy, lively and foot-tapping rhythms, it’s the type of music that invites you to sing along. When folks start to gather around, don’t be surprised if they join in at the top of their lungs. The show is a crowd-pleaser.",
+      "id": 124,
+      "name": "Casey's Corner Pianist",
+      "times": [
+        "1210",
+        "1320",
+        "1435",
+        "1540",
+        "1640",
+        "1720",
+        "1815"
+      ],
+      "type_id": 8
+    },
+    {
+      "area_id": 1,
+      "description": "Make way for the horseless carriage! And say 'How d'you do' to some of the most fascinating folks you'll ever meet. Smartly stylish in their early 20th-century finery, these larger-than-life small-town denizens can be spotted along Main Street throughout the day. ",
+      "id": 125,
+      "name": "Citizens of Main Street",
+      "times": [
+        "0900",
+        "1000",
+        "1100",
+        "1200",
+        "1300"
+      ],
+      "type_id": 8
+    },
+    {
+      "area_id": 1,
+      "description": "Gather ‘round when the Dapper Dans come to town, the finest barbershop quartet in a 2-block radius! Wearing their colorful pinstriped suits, straw hats and taps, this 4-man group sings a soulful a cappella Americana and Disney tunes. ",
+      "id": 126,
+      "name": "The Dapper Dans",
+      "times": [
+        "0900",
+        "0945",
+        "1105",
+        "1145",
+        "1300",
+        "1340",
+        "1545"
+      ],
+      "type_id": 8
+    },
+    {
+      "area_id": 1,
+      "description": "Dressed in costumes from a bygone era, 12 performers ride a trolley until it stops for them to break out in song and dance. They put on show for whoever is wandering the street. ",
+      "id": 128,
+      "name": "Main Street Trolley Show",
+      "times": [
+        "0920",
+        "1010",
+        "1200"
+      ],
+      "type_id": 8
+    }
+  ]
+} --}}
