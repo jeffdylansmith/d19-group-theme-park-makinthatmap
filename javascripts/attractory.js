@@ -3,7 +3,8 @@
 let parkArea = [],
     parkAttraction = [],
     parkAttractionTypes = [],
-    park = [];
+    park = [],
+    parkSelector = [];
 
 // let timeConvert = require('./timeconverter.js');
 
@@ -31,8 +32,6 @@ park.loadParkAttraction = (area) => {
             var data = JSON.parse(this.responseText);
             parkAttraction = data;
             let array = [];
-
-
 			for (let i = 0; i < parkAttraction.length; i++) {
 
                 if (parkAttraction[i].area_id === area) {
@@ -40,6 +39,22 @@ park.loadParkAttraction = (area) => {
                 }
             }
             resolve(array);
+
+        });
+    });
+};
+
+park.loadParkAttractionSelect = () => {
+    return new Promise((resolve, reject) => {
+        let loader = new XMLHttpRequest();
+        loader.open('GET', 'https://mappy-5d13f.firebaseio.com/attractions.json');
+        loader.send();
+
+        loader.addEventListener('load', function() {
+            var data = JSON.parse(this.responseText);
+            parkSelector = data;
+
+            resolve(data);
 
         });
     });

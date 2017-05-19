@@ -43,6 +43,15 @@ attractory.loadParkAttraction()
             console.log('ERROR');
         });
 
+attractory.loadParkAttractionSelect()
+    .then(
+        (loadThemePark) => {
+        	events();
+        },
+        (reject) => {
+            console.log('ERROR');
+        });
+
 attractory.loadParkAttractionTypes()
     .then(
         (loadThemePark) => {
