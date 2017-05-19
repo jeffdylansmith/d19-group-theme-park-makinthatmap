@@ -1,17 +1,17 @@
 {{#each this}}
 
-	<div class="card col s4">
+	<div class="card col l4 m6 s12">
 
 
 		<div class="card-image waves-effect waves-block waves-light">
-			<img class="activator" src="images/img{{@index}}.jpg">
+			<img class="activator responsive-img" src="images/img{{@index}}.jpg">
 		</div>
 		<div class="card-content">
 			<span id="card{{@index}}" class="card-title grey-text text-darken-4 card-wrapper" >{{name}}</span>
 
 		</div>
 
-		<div class="card-reveal">
+		<div class="card-reveal" style="background-color:#{{colorTheme}};">
 			<span class="card-title grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
 			<p>{{description}}</p>
 		</div>
@@ -20,15 +20,3 @@
 	</div>
 
 {{/each}}
-
-
-
-   {{!--  <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-    </div>
- --}}

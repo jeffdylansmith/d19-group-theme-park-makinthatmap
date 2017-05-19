@@ -28,4 +28,4 @@ module.exports = function getModalData(array) {
      return attraction.type_id === 8;
    }),
  };
-}
+};

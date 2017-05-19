@@ -3,7 +3,7 @@
 let parkArea = [],
     parkAttraction = [],
     parkAttractionTypes = [],
-    park = {};
+    park = [];
 
 // let timeConvert = require('./timeconverter.js');
 
@@ -16,11 +16,6 @@ park.loadParkArea = () => {
         loader.addEventListener('load', function() {
             var data = JSON.parse(this.responseText);
             parkArea = data;
-            // filter ares
-            // let array = [];
-            // for (let i = 0; i < 7; i++) {
-            // 	array.push(parkArea[i]);
-            // }
             resolve(data);
         });
     });
