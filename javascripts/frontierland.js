@@ -1,28 +1,14 @@
 "use strict";
 
 let attractory = require('./attractory'),
-	card_modul = require('../templates/card_modul.hbs');
+	card_modul = require('../templates/card_modul.hbs'),
+    utilities = require('./utilities');
 
 attractory.loadParkAttraction(3)
     .then(
         (loadThemePark) => {
-        	let frontierLand = [];
-        	for (let i = 0; i < loadThemePark.length; i++) {
-                if (loadThemePark[i].type_id === 1) {
-                    frontierLand.push(loadThemePark[i]);
-                }
-                if (loadThemePark[i].type_id === 3) {
-                    frontierLand.push(loadThemePark[i]);
-                }
-                if (loadThemePark[i].type_id === 5) {
-                    frontierLand.push(loadThemePark[i]);
-                }
-                if (loadThemePark[i].type_id === 7) {
-                    frontierLand.push(loadThemePark[i]);
-                }
-            }
-
-            let newDiv = $('<div id="modal3" class="modal">').html(card_modul(frontierLand));
+            let modalData = utilities(loadThemePark);
+            let newDiv = $('<div id="modal3" class="modal modal-fixed-footer">').html(card_modul(modalData));
             $('#container').append(newDiv);
             $('.modal').modal();
         },
